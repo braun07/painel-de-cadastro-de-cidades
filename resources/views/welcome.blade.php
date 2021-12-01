@@ -18,31 +18,29 @@
         
     </head>
     <body class="antialiased">
-                <div class="relative flex items-top justify-center min-h-screen bg-gray-900 sm:items-center py-4 sm:pt-0">
+                <div class="relative flex items-top justify-center min-h-screen bg-gray-200 sm:items-center py-4 sm:pt-0">
                     @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    <div class="hidden fixed top-0 right-0 py-4 sm:block bg-gray-200 ">
                     @auth
                     <a href="{{ url('/dashboard') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Dashboard
                     </a>
                     @else
-                    <div class="flex">
                         <a href="{{ route('login') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Logar
+                            Log in
                         </a>
-                    </div>
-
+                        <a class="pr-5"></a>
                     @if (Route::has('register'))
-                    <div class="flex">
                         <a href="{{ route('register') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Registrar
+                            Register
                         </a>
-                    </div>
+                        <a class="pr-5"></a>
                     @endif
                     @endauth
                 </div>
             @endif
             <!-- LandPage -->
+            
             <div class="mx-auto">
                 <div class="flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2000" height="740" viewBox="0 0 1000 380">
@@ -58,6 +56,7 @@
                     </svg>
                 </div>
             </div>
+            <div class="justify-center text-white">teste</div>
         </div>
     </body>
 </html>
