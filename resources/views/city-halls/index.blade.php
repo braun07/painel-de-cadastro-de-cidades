@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-slot name="header" class="text-lg">
+    <x-slot name="header" class="text-ss">
         {{ ('Prefeituras') }}
     </x-slot>
     <div class="section">
@@ -7,7 +7,7 @@
             <div class="overflow-x-auto w-full">
                 <table class="w-full whitespace-no-wrap">
                     <thead>
-                        <tr class="text-lg font-semibold tracking-wide text-left text-black-500 uppercase bg-yellow-300 border-b">
+                        <tr class="text-lg font-semibold tracking-wide text-left text-white uppercase bg-pink-700 border-b">
                             <th class="px-4 py-3">Nomes</th>
                             <th class="px-4 py-3">Cidades</th>
                             <th class="px-4 py-3">Telefones</th>
