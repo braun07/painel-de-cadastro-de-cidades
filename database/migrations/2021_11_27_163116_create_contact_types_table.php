@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReceptivitiesTable extends Migration
+class CreateContactTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateReceptivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('receptivities', function (Blueprint $table) {
+        Schema::create('contact_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateReceptivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('receptivities');
+        Schema::dropIfExists('contact_types');
     }
 }

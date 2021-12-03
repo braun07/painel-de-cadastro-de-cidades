@@ -1,43 +1,20 @@
-@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white'])
-
-@php
-switch ($align) {
-    case 'left':
-        $alignmentClasses = 'origin-top-left left-0';
-        break;
-    case 'top':
-        $alignmentClasses = 'origin-top';
-        break;
-    case 'right':
-    default:
-        $alignmentClasses = 'origin-top-right right-0';
-        break;
-}
-
-switch ($width) {
-    case '48':
-        $width = 'w-48';
-        break;
-}
-@endphp
-
-<div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
-    <div @click="open = ! open">
+<ul class="flex flex-shrink-0 items-center space-x-6">
+    <!-- Profile menu -->
+    <li class="relative">
         {{ $trigger }}
-    </div>
-
-    <div x-show="open"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="transform opacity-0 scale-95"
-            x-transition:enter-end="transform opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-75"
-            x-transition:leave-start="transform opacity-100 scale-100"
-            x-transition:leave-end="transform opacity-0 scale-95"
-            class="absolute z-50 mt-2 {{ $width }} rounded-md shadow-lg {{ $alignmentClasses }}"
-            style="display: none;"
-            @click="open = false">
-        <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }}">
-            {{ $content }}
+        <div x-show="isProfileMenuOpen">
+            <ul
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                @click.outside="closeProfileMenu"
+                @keydown.escape="closeProfileMenu"
+                class="absolute right-0 p-2 mt-2 space-y-2 w-56 text-gray-600 bg-white rounded-md border border-gray-100 shadow-md"
+                aria-label="submenu"
+            >
+                {{ $content }}
+            </ul>
         </div>
-    </div>
-</div>
+    </li>
+</ul>
+

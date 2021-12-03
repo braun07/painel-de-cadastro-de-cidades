@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\CityHall;
+use App\Models\ContactType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCityHallsTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +15,12 @@ class CreateCityHallsTable extends Migration
      */
     public function up()
     {
-        Schema::create('city__halls', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('phone_number', 11)->nullable();
-            $table->unsignedInteger('population')->nullable();
-            $table->foreignIdFor(City::class)->constrained()->onDelete('restrict');
-
+            $table->date('term')->nullable();
+            $table->foreignIdFor(ContactType::class)->constrained()->onDelete('restrict');
+            $table->foreignIdFor(CityHall::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateCityHallsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('city__halls');
+        Schema::dropIfExists('contacts');
     }
 }

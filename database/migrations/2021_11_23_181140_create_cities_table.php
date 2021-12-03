@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactsTable extends Migration
+class CreateCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('mandate_ends_at')->nullable();
-            $table->foreignIdFor(ContactType::class)->constrained()->onDelete('restrict');
-            $table->foreignIdFor(CityHall::class)->constrained()->onDelete('cascade');
-
+            $table->char('state', 2);
+            $table->char('ibge_cod', 8)->nullable()->unique();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('cities');
     }
 }

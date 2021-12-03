@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\ActivityType;
+use App\Models\Contact;
+use App\Models\Receptivity;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,18 +14,17 @@ class CreateActivitiesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('scheduled_at');
-            $table->text('observation')->nullable();
-            $table->text('pending')->nullable();
+            $table->dateTime('time');
+            $table->text('description')->nullable();
+            $table->text('pendencies')->nullable();
             $table->string('status')->nullable();
             $table->foreignIdFor(ActivityType::class)->constrained()->onDelete('restrict');
             $table->foreignIdFor(Receptivity::class)->constrained()->onDelete('restrict');
             $table->foreignIdFor(Contact::class)->constrained()->onDelete('restrict');
-
             $table->timestamps();
         });
     }
