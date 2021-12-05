@@ -23,17 +23,17 @@
         <x-dropdown>
             <x-slot name="trigger">
                 <button
-                    class="align-middle rounded focus:shadow-outline-purple focus:outline-none bg-pink-700"
+                    class="align-middle rounded focus:shadow-outline-purple focus:outline-none bg-pink-700 size-xl          "
                     @click="toggleProfileMenu"
                     @keydown.escape="closeProfileMenu"
                     aria-label="Account"
                     aria-haspopup="true"
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000" class="size-xl"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </button>
             </x-slot>
 
-            <x-slot name="content">
+            <x-slot name="content" >
                 <x-dropdown-link href="{{ route('profile.show') }}">
                     <x-slot name="icon">
                         <svg class="mr-3 w-4 h-4" aria-hidden="true" fill="none" stroke-linecap="round"
@@ -44,7 +44,7 @@
                             <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </x-slot>
-                    My profile
+                    Meu perfil
                 </x-dropdown-link>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -57,7 +57,7 @@
                                     d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
                             </svg>
                         </x-slot>
-                        {{ __('Log Out') }}
+                        {{ __('Sair') }}
                     </x-dropdown-link>
                 </form>
             </x-slot>
