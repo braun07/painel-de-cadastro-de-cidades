@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="flex flex-col overflow-y-auto md:flex-row">
         <div class="h-32 md:h-auto md:w-1/2 pl-40 pt-48">
-            <x-application-logo class="" />
+            <x-application-logo class="text-black" />
         </div>
         <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
             <div class="w-full">
@@ -14,7 +14,7 @@
                 <form method="POST" action="{{ route('login') }}">
                 @csrf
 
-                    <!-- Input[ype="email"] -->
+                    <!-- Inputype="email" -->
                     <div class="mt-4">
                         <x-label :value="__('Email')"/>
                         <x-input type="email"
@@ -26,7 +26,7 @@
                                 autofocus/>
                     </div>
 
-                    <!-- Input[ype="password"] -->
+                    <!-- Inputype="password" -->
                     <div class="mt-4">
                         <x-label for="password" :value="__('Password')"/>
                         <x-input type="password"
@@ -39,8 +39,8 @@
                         <label class="flex items-center dark:text-gray-400">
                             <input type="checkbox"
                                 name="remember"
-                                class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple">
-                            <span class="ml-2">{{ __('Remember me') }}</span>
+                                class="text-pink-600 form-checkbox focus:border-pink-400 focus:outline-none focus:shadow-outline-pink">
+                            <span class="ml-2">{{ __('Lembre-me') }}</span>
                         </label>
                     </div>
 

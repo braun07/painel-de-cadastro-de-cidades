@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\CityHall;
+use App\Models\ContactType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActivityTypesTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +15,12 @@ class CreateActivityTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('activity_types', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->date('term')->nullable();
+            $table->foreignIdFor(CityHall::class) ->constrained() ->onDelete('cascade');
+            $table->foreignIdFor(ContactType::class) ->constrained() ->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ class CreateActivityTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activity_types');
+        Schema::dropIfExists('contacts');
     }
 }

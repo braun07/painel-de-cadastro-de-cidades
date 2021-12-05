@@ -12,10 +12,12 @@ class CitySeeder extends Seeder
      *
      * @return void
      */
-    public function run(): void
+    public function run()
     {
-        $cities = json_decode(file_get_contents(database_path('data/cities,json')), true);
-        
-        City::upsert($cities, 'ibge_cod');
+        {
+            $cities = json_decode(file_get_contents(database_path('data/cities.json')), true);
+
+            City::upsert($cities, 'ibge_cod');
+        }
     }
 }

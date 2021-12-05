@@ -9,9 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class ActivityType extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name'
+        'name',
     ];
 
     public function activities(): HasMany

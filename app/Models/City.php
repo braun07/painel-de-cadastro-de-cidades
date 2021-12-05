@@ -9,12 +9,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class City extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
-        'state',
+        'state'
     ];
-
     public function cityHalls(): HasMany
     {
         return $this->hasMany(CityHall::class);

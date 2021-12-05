@@ -15,12 +15,11 @@ class CityHallFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'Prefeitura ' . $this->faker->firstName(),
-            'phone' => $this->faker->numerify('#########'),
+            'name'=> 'prefeitura-' . $this->faker->firstName(),
+            'phone' => $this->faker->numerify('###########'),
             'population' => $this->faker->randomNumber(),
         ];
     }
-
     public function city(): Factory
     {
         return $this->state(fn () => [

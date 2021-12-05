@@ -3,25 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
-use Illuminate\Auth\Events\Validated;
-use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class CityController extends Controller
 {
     public function index()
     {
-        $cities = City::all();
-        return view('cities.index', compact('cities'));
+        $cities = City::query()
+        ->select('id', 'name', 'state')
+        ->latest()
+        ->orderBy('name')
+        ->paginate();
+        return view('cities.index',['cities' => City::all()]);
     }
-
 
     public function create()
     {
-        return view('cities.create');
+        $cities = City::orderBy('name')->get([
+            'id',
+            'name',
+            'state'
+        ]);
+        return view('cities.create', ['cities' => $cities]);
     }
-
 
     public function store(Request $request)
     {
@@ -33,19 +37,16 @@ class CityController extends Controller
         return redirect()->route('cities.index',$city);
     }
 
-
     public function show(City $city)
     {
         return view('cities.show', ['city' => $city]);
     }
-
 
     public function edit($id)
     {
         $city = City::findOrFail($id);
         return view('cities.edit', ['city' => $city]);
     }
-
 
     public function update(Request $request, City $city)
     {
@@ -57,10 +58,10 @@ class CityController extends Controller
         return redirect()->route('cities.index', $city)->with('success', '<b>$cities->name</b> atualizada.');
     }
 
-
-    public function destroy($id)
+        public function destroy($id)
     {
-        $city = City::find($id);
+        $city = City::findOrFail($id);
         $city->delete();
+        return redirect()->route('cities.index')->with('success', '<b>$city->name</b> deletada.');
     }
 }

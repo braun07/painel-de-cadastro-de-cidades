@@ -21,7 +21,6 @@ class ContactFactory extends Factory
             'contact_type_id' => ContactType::inRandomOrder()->value('id'),
         ];
     }
-
     public function cityHall(): Factory
     {
         return $this->state(fn () => [

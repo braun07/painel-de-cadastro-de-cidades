@@ -18,14 +18,12 @@ class ActivityFactory extends Factory
     {
         return [
             'time' => $this->faker->dateTimeBetween('tomorrow', 'last day of +2 month'),
-            'description' => $this->faker->text(100),
-            'pendencies' => $this->faker->text(100),
-            // 'status' => $this->faker,
+            'description' => $this->faker->text(250),
+            'pendencies' => $this->faker->text(250),
             'activity_type_id' => ActivityType::inRandomOrder()->value('id'),
             'receptivity_id' => Receptivity::inRandomOrder()->value('id'),
         ];
     }
-
     public function contact(): Factory
     {
         return $this->state(fn () => [

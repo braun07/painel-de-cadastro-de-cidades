@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+
 class Activity extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'time',
         'description',
@@ -18,11 +18,12 @@ class Activity extends Model
         'receptivity_id',
         'activity_type_id',
         'contact_id',
-    ];
 
+    ];
     protected $casts = [
         'time' => 'datetime'
     ];
+
 
     public function activityType(): BelongsTo
     {

@@ -14,17 +14,17 @@ class CreateActivitiesTable extends Migration
      *
      * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->dateTime('time');
             $table->text('description')->nullable();
             $table->text('pendencies')->nullable();
-            $table->string('status')->nullable();
-            $table->foreignIdFor(ActivityType::class)->constrained()->onDelete('restrict');
-            $table->foreignIdFor(Receptivity::class)->constrained()->onDelete('restrict');
-            $table->foreignIdFor(Contact::class)->constrained()->onDelete('restrict');
+            $table->string('status',2)->nullable();
+            $table->foreignIdFor(ActivityType::class) ->constrained() ->onDelete('restrict');
+            $table->foreignIdFor(Receptivity::class) ->constrained() ->onDelete('restrict');
+            $table->foreignIdFor(Contact::class) ->constrained() ->onDelete('restrict');
             $table->timestamps();
         });
     }

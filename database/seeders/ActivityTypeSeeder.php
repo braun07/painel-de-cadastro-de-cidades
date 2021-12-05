@@ -15,9 +15,18 @@ class ActivityTypeSeeder extends Seeder
     public function run()
     {
         ActivityType::upsert([
-            ['id' => 1, 'name' => 'Telefonema'],
-            ['id' => 2, 'name' => 'Email'],
-            ['id' => 3, 'name' => 'Visita'],
+            [
+                'id' => 1,
+                'name' => 'Telefonema',
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'E-mail',
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'Visita',
+                ],
             ], 'id'
         );
     }

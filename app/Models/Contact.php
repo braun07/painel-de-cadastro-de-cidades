@@ -10,14 +10,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Contact extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
         'term',
         'contact_type_id',
-        'city_hall_id',
+        'city_hall_id'
     ];
-
     public function contactType(): BelongsTo
     {
         return $this->belongsTo(ContactType::class);

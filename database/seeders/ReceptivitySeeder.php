@@ -15,9 +15,18 @@ class ReceptivitySeeder extends Seeder
     public function run()
     {
         Receptivity::upsert([
-            ['id' => 1, 'name' => 'Esperança'],
-            ['id' => 2, 'name' => 'Ganho'],
-            ['id' => 3, 'name' => 'Perda'],
+            [
+                'id' => 1,
+                'name' => 'Esperaça',
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'ganho',
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'perda',
+                ],
             ], 'id'
         );
     }
