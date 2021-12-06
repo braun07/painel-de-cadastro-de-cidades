@@ -24,7 +24,7 @@
         </div>
     @endif
 
-    <div class="p-4 bg-pink-700 rounded-lg shadow-md">
+    <div class="p-4 bg-pink-600 rounded-lg shadow-md">
 
         <form action="{{ route('profile.update') }}" method="POST">
             @csrf
