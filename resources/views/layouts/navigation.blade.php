@@ -17,7 +17,7 @@
             <li class="relative py-3">
                 <x-nav-link href="{{ route('cities.create') }}" :active="request()->routeIs('cities.create')">
                     <x-slot name="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><g><rect fill="none" height="24" width="24"/></g><g><path d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><clipPath id="clip-SPRK_default_preset_name_custom_1"><rect width="24" height="24"/></clipPath></defs><g id="SPRK_default_preset_name_custom_1" data-name="SPRK_default_preset_name_custom – 1" clip-path="url(#clip-SPRK_default_preset_name_custom_1)"><image id="outline_apartment_white_24dp" width="19" height="19" transform="translate(5 5)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQAAAAB/ecQqAAAAAnRSTlMAAHaTzTgAAAAwSURBVHgBlcWBBQAgAADBaLBWj18rvgmeOrjxYerOoJpqBmSqOwKoVCvOovIso2cXj7aCjWTExPoAAAAASUVORK5CYII="/><image id="outline_add_white_24dp" width="12" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQAAAAB/ecQqAAAAAnRSTlMAAHaTzTgAAAAaSURBVHgBY6AWYD5Adcr+//8/WCla2EclAABqEh8tob6sVQAAAABJRU5ErkJggg=="/></g></svg>
                     </x-slot>
                     {{ __('Adicionar Cidade') }}
                 </x-nav-link>
@@ -33,7 +33,7 @@
             <li class="relative py-3">
                 <x-nav-link href="{{ route('city-halls.create') }}" :active="request()->routeIs('city-halls.create')">
                     <x-slot name="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 7h-4V5l-2-2h-4L8 5v2H4c-1.1 0-2 .9-2 2v5c0 .75.4 1.38 1 1.73V19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-3.28c.59-.35 1-.99 1-1.72V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5zM4 9h16v5h-5v-3H9v3H4V9zm9 6h-2v-2h2v2zm6 4H5v-3h4v1h6v-1h4v3z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><clipPath id="clip-SPRK_default_preset_name_custom_1"><rect width="24" height="24"/></clipPath></defs><g id="SPRK_default_preset_name_custom_1" data-name="SPRK_default_preset_name_custom – 1" clip-path="url(#clip-SPRK_default_preset_name_custom_1)"><image id="outline_add_white_24dp" width="12" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQAAAAB/ecQqAAAAAnRSTlMAAHaTzTgAAAAaSURBVHgBY6AWYD5Adcr+//8/WCla2EclAABqEh8tob6sVQAAAABJRU5ErkJggg=="/><image id="outline_work_white_24dp" width="18" height="18" transform="translate(6 6)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAkElEQVRYw+3XPRJAMBBAYffA5RX2WpqMhgv4exoVkkHWZJh9ZYp8TXZmk2XWB6JEaNnXIpQ61/f46hUIhFASD7gg4OKBravnBsQAFNQn7/1uvvkgp0Ors/mgQrPjfNCoAsf5YFAF+CMwGpAcmAxIDswG/B9YDEgO8HnAvb22yNuLV+irpLE6ej97WsuvZT1uBaa0+dzb9fSBAAAAAElFTkSuQmCC"/></g></svg>
                     </x-slot>
                     {{ __('Adicionar Prefeitura') }}
                 </x-nav-link>
@@ -41,7 +41,7 @@
             <li class="relative py-3">
                 <x-nav-link href="{{ route('city-halls.index') }}" :active="request()->routeIs('city-halls.index')">
                     <x-slot name="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 7h-4V5l-2-2h-4L8 5v2H4c-1.1 0-2 .9-2 2v5c0 .75.4 1.38 1 1.73V19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-3.28c.59-.35 1-.99 1-1.72V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5zM4 9h16v5h-5v-3H9v3H4V9zm9 6h-2v-2h2v2zm6 4H5v-3h4v1h6v-1h4v3z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                     </x-slot>
                     {{ __('Consultar Prefeituras') }}
                 </x-nav-link>

@@ -1,6 +1,5 @@
 <x-app-layout>
     <x-slot name="header">
-        z
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -31,7 +30,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="text-right mt-6">
+                        <div class="text-center mt-6">
                             <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-pink-700 hover:bg-pink-700 focus:outline-none focus:border-black-100 focus:shadow-outline-blue active:bg-pink-700 transition duration-150 ease-in-out">
                                 {{ __('Atualizar') }}
                             </button>

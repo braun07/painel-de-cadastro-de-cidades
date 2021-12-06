@@ -48,7 +48,7 @@
                                     </select>
                             </div>
                             </div>
-                            <div class="text-right mt-6">
+                            <div class="text-center mt-6">
                                 <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-500 focus:outline-none focus:border-black-100 focus:shadow-outline-pink active:bg-pink-700 transition duration-150 ease-in-out">
                                     {{ __('Atualizar') }}
                                 </button>

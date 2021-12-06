@@ -1,4 +1,4 @@
-<header class="z-10 py-4 bg-white shadow-md">
+<header class="z-10 py-4">
     <div class="container flex justify-between items-center px-6 mx-auto h-full text-purple-600 md:justify-end">
         <!-- Mobile hamburger -->
         <button
@@ -23,13 +23,13 @@
         <x-dropdown>
             <x-slot name="trigger">
                 <button
-                    class="align-middle rounded focus:shadow-outline-purple focus:outline-none bg-pink-700 size-xl          "
+                    class="mx-auto lg:mx-0 hover:underline text-gray-800 font-bold bg-pink-700 rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out          "
                     @click="toggleProfileMenu"
                     @keydown.escape="closeProfileMenu"
                     aria-label="Account"
                     aria-haspopup="true"
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000" class="size-xl"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000" class="text-xl "><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                 </button>
             </x-slot>
 

@@ -1,6 +1,8 @@
 <x-app-layout>
-    <x-slot name="header" class="">
-        {{ __('Meu Perfil') }}
+    <x-slot name="header" class="font-bold">
+        <h2 class="font-bold text-xl text-gray-800 leading-tight uppercase pb-10">
+            {{ __('Meu Perfil') }}
+        </h2>
     </x-slot>
 
     @if ($message = Session::get('success'))
