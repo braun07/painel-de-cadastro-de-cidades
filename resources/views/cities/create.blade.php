@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header" class="text-lg">
-        <h2 class="font-bold text-xl text-gray-800 leading-tight pl-28 uppercase">
+        <h2 class="font-bold text-xl text-gray-800 leading-tight pl-40 uppercase">
             {{ ('Cadastro de Cidade') }}
         </h2>
     </x-slot>

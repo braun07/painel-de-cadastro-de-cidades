@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-bold text-xl text-gray-800 leading-tight pl-28 uppercase">
+        <h2 class="font-bold text-xl text-gray-800 leading-tight pl-40 uppercase">
             {{ __("Criar Prefeitura") }}
         </h2>
     </x-slot>

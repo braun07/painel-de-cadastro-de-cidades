@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::resource('city-halls',CityHallController::class);
     Route::resource('cities', CityController::class);
-    Route::resource('contact', ContactController::class);
-    Route::resource('activity', ActivityController::class);
+    Route::resource('contacts', ContactController::class);
+    Route::resource('activities', ActivityController::class);
 
 });
